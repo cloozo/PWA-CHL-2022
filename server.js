@@ -1,15 +1,15 @@
+//importing necessary files
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
+const apiRoutes = require("./routes/api.js");
 
-const PORT = process.env.PORT || 3003;
-const MONGODB_URI =
-  process.env.MONGODB_URI || "mongodb://localhost:27017/budget";
-
+const PORT = process.env.PORT || 3001;
+app.use(logger("dev"));
 const app = express();
 
-app.use(logger("dev"));
+// express compression
 
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
@@ -17,14 +17,16 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(MONGODB_URI, {
+const mongoUri =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/budget2022";
+mongoose.connect(mongoUri, {
   useNewUrlParser: true,
   useFindAndModify: false,
+  useUnifiedTopology: true,
 });
 
-// routes
-app.use(require("./routes/api.js"));
+app.use(apiRoutes);
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+  console.log(`App currently running  successfully on port ${PORT}!`);
 });
