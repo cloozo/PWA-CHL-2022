@@ -1,19 +1,19 @@
-//importing necessary files
 const express = require("express");
-const mongoose = require("mongoose");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 const compression = require("compression");
 const apiRoutes = require("./routes/api.js");
 
 const PORT = process.env.PORT || 3001;
-app.use(logger("dev"));
+
 const app = express();
 
-// express compression
+app.use(logger("dev"));
+
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// public: displaying of static files
+
 app.use(express.static("public"));
 
 const mongoUri =
@@ -27,5 +27,5 @@ mongoose.connect(mongoUri, {
 app.use(apiRoutes);
 
 app.listen(PORT, () => {
-  console.log(`App currently running  successfully on port ${PORT}!`);
+  console.log(`App running on port ${PORT}!`);
 });
