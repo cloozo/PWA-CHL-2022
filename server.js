@@ -10,11 +10,10 @@ app.use(logger("dev"));
 const app = express();
 
 // express compression
-
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// public: displaying of static files
 app.use(express.static("public"));
 
 const mongoUri =
