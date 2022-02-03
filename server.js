@@ -1,7 +1,7 @@
 //importing necessary files
 const express = require("express");
-const logger = require("morgan");
 const mongoose = require("mongoose");
+const logger = require("morgan");
 const compression = require("compression");
 const apiRoutes = require("./routes/api.js");
 
