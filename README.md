@@ -23,7 +23,8 @@ THEN the deposits or expenses added while they were offline are added to their t
 ## Github Link: 
 https://github.com/cloozo/PWA-CHL-2022
 
- ## Heroku Link: Link to deployed App in Heroku
+ ## Heroku: Link to deployed App in Heroku:
+ https://agile-sierra-27489.herokuapp.com/
 
 ---
 ## USER STORY:
