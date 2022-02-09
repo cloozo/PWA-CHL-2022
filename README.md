@@ -25,16 +25,20 @@ https://github.com/cloozo/PWA-CHL-2022
 
  ## Heroku Link: Link to deployed App in Heroku
 
---
-# USER STORY:
+---
+## USER STORY:
 ---
 AS AN avid traveler
 I WANT to be able to track my withdrawals and deposits with or without a data/internet connection
 SO THAT my account balance is accurate when I am traveling 
+  ## Installation
+  ---
+  Clone repository from GitHub, then install all dependencies.
+  
 
 
+## Technologies Used
 ---
-# Technologies Used
 
 - Sequelize
 -MySql
