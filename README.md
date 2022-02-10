@@ -24,6 +24,10 @@ https://github.com/cloozo/PWA-CHL-2022
 
  ## Heroku: Link to deployed App in Heroku:
  https://agile-sierra-27489.herokuapp.com/
+ 
+  ## screenshot
+![pwa](https://user-images.githubusercontent.com/84163696/153311494-543607d5-cfc3-4151-895d-bed0c1f54ca4.png)
+
 
 
 ## USER STORY:
